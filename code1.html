@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="code1.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RuralLearn Hub</title>
+  <link rel="stylesheet" href="css/style.css">
+  <meta name="description" content="Educational platform designed for rural areas with limited connectivity">
+</head>
+<body>
+  <div class="app-container">
+    <!-- Connection Status Bar -->
+    <div class="connection-status">
+      <span id="connection-icon"></span>
+      <span id="connection-text">Working Offline</span>
+      <span id="sync-status">Last synced: Never</span>
+    </div>
+
+    <!-- Header Section -->
+    <header>
+      <div class="logo-container">
+        <img src="images/logo-placeholder.png" alt="RuralLearn Hub Logo" id="logo">
+        <h1>RuralLearn<span>Hub</span></h1>
+      </div>
+      <div class="header-controls">
+        <button id="download-content-btn" class="action-button">Download Content</button>
+        <div class="user-profile">
+          <img src="images/profile-placeholder.png" alt="User Profile" id="user-avatar">
+          <span id="username">Student</span>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Navigation -->
+    <nav class="main-nav">
+      <ul>
+        <li><button class="nav-button active" data-page="subjects">My Subjects</button></li>
+        <li><button class="nav-button" data-page="community">Community Resources</button></li>
+        <li><button class="nav-button" data-page="projects">Local Projects</button></li>
+        <li><button class="nav-button" data-page="progress">My Progress</button></li>
+      </ul>
+    </nav>
+
+    <!-- Main Content Area -->
+    <main>
+      <!-- Subjects Page -->
+      <section id="subjects" class="page active">
+        <div class="page-header">
+          <h2>My Learning Subjects</h2>
+          <div class="search-container">
+            <input type="text" id="subject-search" placeholder="Search lessons...">
+            <button id="search-btn">Search</button>
+          </div>
+        </div>
+
+        <div class="subject-grid">
+          <div class="subject-card" data-subject="agriculture">
+            <div class="subject-icon agriculture"></div>
+            <h3>Sustainable Agriculture</h3>
+            <div class="progress-indicator">
+              <div class="progress-bar" style="width: 65%"></div>
+              <span>65% Complete</span>
+            </div>
+            <button class="open-subject-btn">Continue Learning</button>
+          </div>
+
+          <div class="subject-card" data-subject="math">
+            <div class="subject-icon math"></div>
+            <h3>Practical Mathematics</h3>
+            <div class="progress-indicator">
+              <div class="progress-bar" style="width: 42%"></div>
+              <span>42% Complete</span>
+            </div>
+            <button class="open-subject-btn">Continue Learning</button>
+          </div>
+
+          <div class="subject-card" data-subject="science">
+            <div class="subject-icon science"></div>
+            <h3>Environmental Science</h3>
+            <div class="progress-indicator">
+              <div class="progress-bar" style="width: 28%"></div>
+              <span>28% Complete</span>
+            </div>
+            <button class="open-subject-btn">Continue Learning</button>
+          </div>
+
+          <div class="subject-card" data-subject="health">
+            <div class="subject-icon health"></div>
+            <h3>Health & Wellness</h3>
+            <div class="progress-indicator">
+              <div class="progress-bar" style="width: 75%"></div>
+              <span>75% Complete</span>
+            </div>
+            <button class="open-subject-btn">Continue Learning</button>
+          </div>
+
+          <div class="subject-card" data-subject="technology">
+            <div class="subject-icon technology"></div>
+            <h3>Basic Technology</h3>
+            <div class="progress-indicator">
+              <div class="progress-bar" style="width: 15%"></div>
+              <span>15% Complete</span>
+            </div>
+            <button class="open-subject-btn">Continue Learning</button>
+          </div>
+
+          <div class="subject-card" data-subject="language">
+            <div class="subject-icon language"></div>
+            <h3>Language Skills</h3>
+            <div class="progress-indicator">
+              <div class="progress-bar" style="width: 50%"></div>
+              <span>50% Complete</span>
+            </div>
+            <button class="open-subject-btn">Continue Learning</button>
+          </div>
+
+          <div class="add-subject-card">
+            <div class="add-icon">+</div>
+            <span>Add New Subject</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- Community Resources Page -->
+      <section id="community" class="page">
+        <div class="page-header">
+          <h2>Community Learning Resources</h2>
+        </div>
+
+        <div class="resource-tabs">
+          <button class="resource-tab active" data-tab="local">Local Knowledge</button>
+          <button class="resource-tab" data-tab="shared">Shared Materials</button>
+          <button class="resource-tab" data-tab="events">Upcoming Events</button>
+        </div>
+
+        <div id="local" class="resource-content active">
+          <div class="community-grid">
+            <div class="community-card">
+              <h3>Traditional Farming Methods</h3>
+              <p>Contributed by: Local Farmers Association</p>
+              <span class="tag">Agriculture</span>
+              <div class="card-actions">
+                <button class="download-btn">Save Offline</button>
+                <button class="view-btn">View Now</button>
+              </div>
+            </div>
+
+            <div class="community-card">
+              <h3>Local Medicinal Plants Guide</h3>
+              <p>Contributed by: Health Center</p>
+              <span class="tag">Health</span>
+              <div class="card-actions">
+                <button class="download-btn">Save Offline</button>
+                <button class="view-btn">View Now</button>
+              </div>
+            </div>
+
+            <div class="community-card">
+              <h3>Regional History Archives</h3>
+              <p>Contributed by: Community Elders</p>
+              <span class="tag">History</span>
+              <div class="card-actions">
+                <button class="download-btn">Save Offline</button>
+                <button class="view-btn">View Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="shared" class="resource-content">
+          <div class="community-grid">
+            <div class="community-card">
+              <h3>Mathematics Workbook</h3>
+              <p>Shared by: Regional School Network</p>
+              <span class="tag">Mathematics</span>
+              <div class="card-actions">
+                <button class="download-btn">Save Offline</button>
+                <button class="view-btn">View Now</button>
+              </div>
+            </div>
+
+            <div class="community-card">
+              <h3>Reading Comprehension Set</h3>
+              <p>Shared by: Literacy Program</p>
+              <span class="tag">Language</span>
+              <div class="card-actions">
+                <button class="download-btn">Save Offline</button>
+                <button class="view-btn">View Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="events" class="resource-content">
+          <div class="events-list">
+            <div class="event-item">
+              <div class="event-date">
+                <span class="day">15</span>
+                <span class="month">APR</span>
+              </div>
+              <div class="event-details">
+                <h3>Community Science Fair</h3>
+                <p>Location: Community Center</p>
+                <p>Time: 10:00 AM - 3:00 PM</p>
+              </div>
+              <button class="remind-btn">Set Reminder</button>
+            </div>
+
+            <div class="event-item">
+              <div class="event-date">
+                <span class="day">22</span>
+                <span class="month">APR</span>
+              </div>
+              <div class="event-details">
+                <h3>Agricultural Workshop</h3>
+                <p>Location: Demo Farm</p>
+                <p>Time: 9:00 AM - 12:00 PM</p>
+              </div>
+              <button class="remind-btn">Set Reminder</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Local Projects Page -->
+      <section id="projects" class="page">
+        <div class="page-header">
+          <h2>Local Learning Projects</h2>
+          <button id="new-project-btn" class="action-button">Start New Project</button>
+        </div>
+
+        <div class="projects-container">
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Water Quality Testing</h3>
+              <span class="project-status in-progress">In Progress</span>
+            </div>
+            <p>Test and document the quality of local water sources using the provided test kit.</p>
+            <div class="project-meta">
+              <span class="project-subject">Environmental Science</span>
+              <span class="project-due">Due: Apr 20</span>
+            </div>
+            <div class="project-progress">
+              <span>2 of 5 tasks completed</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 40%"></div>
+              </div>
+            </div>
+            <button class="continue-project-btn">Continue Project</button>
+          </div>
+
+          <div class="project-card">
+            <div class="project-header">
+              <h3>Community Garden Planning</h3>
+              <span class="project-status not-started">Not Started</span>
+            </div>
+            <p>Design a plan for a small community garden that includes local vegetables and herbs.</p>
+            <div class="project-meta">
+              <span class="project-subject">Agriculture</span>
+              <span class="project-due">Due: May 5</span>
+            </div>
+            <div class="project-progress">
+              <span>0 of 4 tasks completed</span>
+              <div class="progress-bar">
+                <div class="progress" style="width: 0%"></div>
+              </div>
+            </div>
+            <button class="continue-project-btn">Start Project</button>
+          </div>
+
+          <div class="project-card completed">
+            <div class="project-header">
+              <h3>Solar Energy Demonstration</h3>
+              <span class="project-status completed">Completed</span>
+            </div>
+            <p>Built a simple solar powered device to demonstrate renewable energy principles.</p>
+            <div class="project-meta">
+              <span class="project-subject">Science & Technology</span>
+              <span class="project-completed">Completed: Mar 28</span>
+            </div>
+            <div class="project-feedback">
+              <span>Community Feedback: 4.5/5</span>
+              <div class="star-rating">
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star filled">★</span>
+                <span class="star half-filled">★</span>
+              </div>
+            </div>
+            <button class="view-project-btn">View Project</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- My Progress Page -->
+      <section id="progress" class="page">
+        <div class="page-header">
+          <h2>My Learning Progress</h2>
+          <div class="date-range">
+            <button id="prev-period">◀</button>
+            <span id="current-period">April 2025</span>
+            <button id="next-period">▶</button>
+          </div>
+        </div>
+
+        <div class="progress-stats">
+          <div class="stat-card">
+            <h3>Learning Hours</h3>
+            <div class="stat-value">12.5</div>
+            <div class="stat-trend positive">↑ 2.3 from last month</div>
+          </div>
+          <div class="stat-card">
+            <h3>Completed Lessons</h3>
+            <div class="stat-value">8</div>
+            <div class="stat-trend positive">↑ 3 from last month</div>
+          </div>
+          <div class="stat-card">
+            <h3>Projects Completed</h3>
+            <div class="stat-value">1</div>
+            <div class="stat-trend neutral">= Same as last month</div>
+          </div>
+          <div class="stat-card">
+            <h3>Quiz Average</h3>
+            <div class="stat-value">82%</div>
+            <div class="stat-trend positive">↑ 4% from last month</div>
+          </div>
+        </div>
+
+        <div class="progress-chart-container">
+          <h3>Learning Activity</h3>
+          <div class="activity-chart">
+            <canvas id="activity-chart" height="250"></canvas>
+          </div>
+        </div>
+
+        <div class="progress-detail">
+          <h3>Recent Achievements</h3>
+          <div class="achievements-list">
+            <div class="achievement-item">
+              <div class="achievement-icon completed-course"></div>
+              <div class="achievement-details">
+                <h4>Course Completion: Basic Irrigation</h4>
+                <p>Completed all modules with an average score of 88%</p>
+              </div>
+              <div class="achievement-date">Apr 5, 2025</div>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon streak"></div>
+              <div class="achievement-details">
+                <h4>Learning Streak: 10 Days</h4>
+                <p>Consistently accessed learning materials for 10 consecutive days</p>
+              </div>
+              <div class="achievement-date">Apr 3, 2025</div>
+            </div>
+            <div class="achievement-item">
+              <div class="achievement-icon project"></div>
+              <div class="achievement-details">
+                <h4>Project Excellence: Solar Energy Demonstration</h4>
+                <p>Received community rating of 4.5/5</p>
+              </div>
+              <div class="achievement-date">Mar 28, 2025</div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- Lesson View Modal -->
+    <div id="lesson-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 id="lesson-title">Lesson Title</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div id="lesson-content">
+            <!-- Lesson content will be loaded here -->
+          </div>
+          <div class="lesson-navigation">
+            <button id="prev-lesson" disabled>Previous</button>
+            <span id="lesson-progress">1 of 5</span>
+            <button id="next-lesson">Next</button>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button id="complete-lesson">Mark as Complete</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Download Manager Modal -->
+    <div id="download-modal" class="modal hidden">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Content Download Manager</h2>
+          <button class="close-modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="storage-info">
+            <h3>Device Storage</h3>
+            <div class="storage-bar">
+              <div class="storage-used" style="width: 35%"></div>
+            </div>
+            <span>1.2 GB free of 2.0 GB</span>
+          </div>
+          
+          <div class="download-options">
+            <h3>Available Downloads</h3>
+            <div class="download-list">
+              <div class="download-item">
+                <div class="download-info">
+                  <h4>Sustainable Farming Course</h4>
+                  <p>Size: 45 MB • 12 lessons</p>
+                </div>
+                <button class="download-action">Download</button>
+              </div>
+              <div class="download-item">
+                <div class="download-info">
+                  <h4>Basic Mathematics</h4>
+                  <p>Size: 28 MB • 15 lessons</p>
+                </div>
+                <button class="download-action">Download</button>
+              </div>
+              <div class="download-item">
+                <div class="download-info">
+                  <h4>Local Biodiversity Guide</h4>
+                  <p>Size: 36 MB • 8 lessons</p>
+                </div>
+                <button class="download-action">Download</button>
+              </div>
+            </div>
+          </div>
+          
+          <div class="sync-options">
+            <h3>Sync Options</h3>
+            <label>
+              <input type="checkbox" id="auto-sync" checked>
+              Automatically sync when connection is available
+            </label>
+            <button id="manual-sync" class="secondary-btn">Sync Now</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="code1.js"></script>
+
+</body>
+</html>
